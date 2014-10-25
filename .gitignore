@@ -1,0 +1,8 @@
+bash
+npm
+vim/vim/.netrwhist
+vim/vim/bundle
+zsh/zshrc-e
+zsh/oh-my-zsh
+*.swp
+.DS_Store

@@ -1,0 +1,127 @@
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Blade
+" Syntax helper
+Plugin 'xsbeats/vim-blade'
+
+" Commentary
+Plugin 'tpope/vim-commentary'
+
+" CSS3
+" Enhanced CSS3 support
+Plugin 'hail2u/vim-css3-syntax'
+
+" CtrlP
+" Fuzzy searching
+Plugin 'kien/ctrlp.vim'
+
+" DelimitMate
+" Autocomplete for quotes, brackets, etc.
+Plugin 'Raimondi/delimitMate'
+
+" EasyMotion
+Plugin 'Lokaltog/vim-easymotion'
+
+" Emmet
+Plugin 'mattn/emmet-vim'
+
+" Fugitive
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" Git gutter
+Plugin 'airblade/vim-gitgutter'
+
+" Grunt
+Plugin 'gruntjs/grunt'
+
+" HAML
+" Haml and SASS support
+Plugin 'tpope/vim-haml'
+
+" HTML5
+" Enhanced HTML5 support
+Plugin 'othree/html5.vim'
+
+" Indent guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Javascript Libraries Syntax
+" Syntax helper for various javascript libraries
+Plugin 'othree/javascript-libraries-syntax.vim'
+
+" Jade
+" Syntax helper
+Plugin 'digitaltoad/vim-jade'
+
+" jQuery
+Plugin 'nono/jquery.vim'
+
+" JSON
+" Syntax helper
+Plugin 'elzr/vim-json'
+
+" Markdown
+Plugin 'tpope/vim-markdown'
+
+" Multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
+" Mustache.js
+" Syntax helper
+Plugin 'mustache/vim-mustache-handlebars'
+
+" Neocomplete
+" Autocomplete/CodeIntel
+Plugin 'Shougo/neocomplete.vim'
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
+
+" Rails
+Plugin 'tpope/vim-rails'
+
+" Snippet engine
+" Plugin 'SirVer/ultisnips'
+
+" Snippets
+" Plugin 'honza/vim-snippets'
+
+" Surround
+Plugin 'tpope/vim-surround'
+
+" Syntastic
+" Linter
+Plugin 'scrooloose/syntastic'
+
+" Tabular
+" Text alignment helper
+Plugin 'godlygeek/tabular'
+
+" Vinarise
+" Hex editing
+Plugin 'Shougo/vinarise.vim'
+
+" Web API
+Plugin 'mattn/webapi-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" vim: ft=vim

@@ -1,0 +1,109 @@
+filetype off
+
+"
+" Load Vundle and plugins
+"
+source ~/bin/dotfiles/vim/plugins
+
+let mapleader=" "
+syntax on
+filetype plugin indent on
+set background=dark
+colorscheme monokai
+
+set number
+set ignorecase
+set hlsearch
+set autoindent
+set fileencoding=utf-8
+set encoding=utf-8
+set backspace=indent,eol,start
+set smartcase
+set incsearch
+set showmatch
+set clipboard^=unnamed
+set ttimeoutlen=50
+set virtualedit=onemore
+set hlsearch
+set cursorline
+set breakindent
+
+" ZSH
+" set shell=/usr/local/bin/zsh\ -i
+
+"
+" Global indent and backspace by specified # of spaces
+" Check ftplugin directory for specific indentation settings
+"
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" Remove trailing space
+autocmd BufWritePre * :%s/\s\+$//e
+set wrap
+set linebreak
+" note trailing space at end of next line
+" set showbreak=>\ \ \
+
+" CtrlP ignore files
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
+" jQuery
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+"
+" NerdTREE
+"
+let g:NERDTreeWinSize = 40  " Set width
+let NERDTreeShowHidden = 1  " Show hidden files/folders
+
+"
+" Emmet settings
+"
+let g:user_emmet_settings = {
+\  'php' : {
+\    'extends' : 'html',
+\    'filters' : 'c',
+\  },
+\  'xml' : {
+\    'extends' : 'html',
+\  },
+\}
+
+"
+" Neocomplete
+"
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"
+" Snippets
+"
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"
+" Custom keymaps
+"
+
+" Save
+nnoremap <leader>s :w<CR>
+
+" Close file
+nnoremap <leader>w :q<CR>
+
+" NERDTree toggle
+nnoremap <leader>n :NERDTreeToggle<CR>

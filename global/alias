@@ -1,0 +1,22 @@
+# ALIAS
+
+alias li='ls -al'
+alias c='clear'
+alias r='rm -rf'
+alias u='sudo npm -g update; gem update; brew update; brew upgrade'
+alias apacheon='sudo apachectl start'
+alias apacheoff='sudo apachectl stop'
+alias apachere='sudo apachectl restart'
+alias artisan='php artisan'
+alias sqlon='mysql.server start'
+alias sqloff='mysql.server stop'
+alias sqlre='mysql.server restart'
+alias servon='sudo apachectl start; mysql.server start'
+alias servoff='sudo apachectl stop; mysql.server stop'
+alias servre='sudo apachectl restart; mysql.server restart'
+alias spotlighton='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
+alias spotlightoff='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
+take () {
+	mkdir $1
+	cd $1
+}
