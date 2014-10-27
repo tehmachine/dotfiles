@@ -96,6 +96,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 "
+" Gist
+"
+let g:gist_detect_filetype = 1
+
+"
 " Custom keymaps
 "
 
