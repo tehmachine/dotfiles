@@ -36,6 +36,10 @@ Plugin 'mattn/emmet-vim'
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
 
+" Gist
+" Git gists
+Plugin 'mattn/gist-vim'
+
 " Git gutter
 Plugin 'airblade/vim-gitgutter'
 
