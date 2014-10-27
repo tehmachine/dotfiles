@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repo serves mainly as a backup for my dotfiles but feel free to reference it for your own endeavors and/or make suggestions. This dir sits in ~/bin with appropriate symlinks in ~
+This repo serves mainly as a backup for my dotfiles but feel free to reference it for your own endeavors and/or make suggestions. This dir sits in ~/bin with appropriate symlinks in ~. Note I am using Mac OS X and some aliases may need to be adapted for your operating system.
 
 ## Vim
 
