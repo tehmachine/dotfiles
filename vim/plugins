@@ -92,12 +92,6 @@ Plugin 'scrooloose/nerdtree'
 " Rails
 Plugin 'tpope/vim-rails'
 
-" Snippet engine
-Plugin 'SirVer/ultisnips'
-
-" Snippets
-Plugin 'honza/vim-snippets'
-
 " Surround
 Plugin 'tpope/vim-surround'
 
