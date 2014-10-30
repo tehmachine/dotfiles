@@ -3,7 +3,7 @@
 alias li='ls -al'
 alias c='clear'
 alias r='rm -rf'
-alias u='sudo npm -g update; gem update; brew update; brew upgrade'
+alias u='sudo npm -g update; gem update; brew update; brew upgrade; composer selfupdate'
 alias apacheon='sudo apachectl start'
 alias apacheoff='sudo apachectl stop'
 alias apachere='sudo apachectl restart'
