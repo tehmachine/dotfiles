@@ -12,7 +12,7 @@ ZSH=$HOME/bin/dotfiles/zsh/oh-my-zsh
 #
 # Selected themes:
 # blinks, clean, fwalch, kphoen, mrtazz, simple, wedisagree/wedisagree-custom
-ZSH_THEME="blinks"
+ZSH_THEME="gnzh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

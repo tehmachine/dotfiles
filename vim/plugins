@@ -57,13 +57,13 @@ Plugin 'othree/html5.vim'
 " Indent guides
 Plugin 'nathanaelkane/vim-indent-guides'
 
-" Javascript Libraries Syntax
-" Syntax helper for various javascript libraries
-Plugin 'othree/javascript-libraries-syntax.vim'
-
 " Jade
 " Syntax helper
 Plugin 'digitaltoad/vim-jade'
+
+" Javascript Libraries Syntax
+" Syntax helper for various javascript libraries
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " jQuery
 Plugin 'nono/jquery.vim'

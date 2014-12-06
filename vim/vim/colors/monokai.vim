@@ -13,13 +13,13 @@ let g:colors_name = "Monokai"
 " Reset Git Gutter colors
 highlight clear SignColumn
 
-hi Cursor ctermfg=233 ctermbg=232 cterm=NONE guifg=#111111 guibg=#f8f8f0 gui=NONE
+hi Cursor ctermfg=233 ctermbg=233 cterm=NONE guifg=#111111 guibg=#f8f8f0 gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#282827 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#282827 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#282827 gui=NONE
-hi LineNr ctermfg=244 ctermbg=232 cterm=NONE guifg=#858582 guibg=#111111 gui=NONE
-hi VertSplit ctermfg=234 ctermbg=234 cterm=NONE guifg=#545452 guibg=#545452 gui=NONE
+hi LineNr ctermfg=244 ctermbg=233 cterm=NONE guifg=#858582 guibg=#111111 gui=NONE
+hi VertSplit ctermfg=234 ctermbg=NONE cterm=NONE guifg=#545452 guibg=#545452 gui=NONE
 hi MatchParen ctermfg=197 ctermbg=NONE cterm=underline guifg=#f92672 guibg=NONE gui=underline
 hi StatusLine ctermfg=231 ctermbg=234 cterm=bold guifg=#f8f8f2 guibg=#545452 gui=bold
 hi StatusLineNC ctermfg=246 ctermbg=234 cterm=NONE guifg=#f8f8f2 guibg=#545452 gui=NONE
@@ -31,9 +31,9 @@ hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NO
 hi Folded ctermfg=95 ctermbg=233 cterm=NONE guifg=#75715e guibg=#111111 gui=NONE
 hi TabLineSel ctermfg=231 ctermbg=239 cterm=NONE
 hi TabLine ctermfg=246 ctermbg=234 cterm=NONE
-hi TabLineFill ctermfg=NONE ctermbg=232 cterm=NONE
+hi TabLineFill ctermfg=NONE ctermbg=233 cterm=NONE
 
-hi Normal ctermfg=231 ctermbg=232 cterm=NONE guifg=#f8f8f2 guibg=#111111 gui=NONE
+hi Normal ctermfg=231 ctermbg=233 cterm=NONE guifg=#f8f8f2 guibg=#111111 gui=NONE
 hi Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Comment ctermfg=243 ctermbg=NONE cterm=NONE guifg=#71755e guibg=NONE gui=NONE
@@ -51,7 +51,7 @@ hi Function ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NON
 hi Identifier ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
 hi Keyword ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi NonText ctermfg=59 ctermbg=232 cterm=NONE guifg=#49483e guibg=#1d1d1c gui=NONE
+hi NonText ctermfg=59 ctermbg=233 cterm=NONE guifg=#49483e guibg=#1d1d1c gui=NONE
 hi Number ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Operator ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi PreProc ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
