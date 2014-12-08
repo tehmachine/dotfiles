@@ -32,6 +32,19 @@ set breakindent
 " set shell=/usr/local/bin/zsh\ -i
 
 "
+" Status line options
+" Always show statusline
+set laststatus=2
+" File name
+set statusline=%f
+" Separator, align right
+set statusline+=\ %=
+" Current line / totale number of lines
+set statusline+=Line:\ %l/%L
+" File type
+set statusline+=\ [%Y]
+
+"
 " Global indent and backspace by specified # of spaces
 " Check ftplugin directory for specific indentation settings
 "
@@ -109,6 +122,10 @@ nnoremap <leader>s :w<CR>
 
 " Close file
 nnoremap <leader>w :q<CR>
+
+" Move through wrapped lines
+nmap j gj
+nmap k gk
 
 " NERDTree toggle
 nnoremap <leader>n :NERDTreeToggle<CR>
