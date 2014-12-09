@@ -39,8 +39,10 @@ set laststatus=2
 set statusline=%f
 " Separator, align right
 set statusline+=\ %=
+" Git status
+set statusline+=\ Git:\ %{fugitive#head()}\ \|
 " Current line / totale number of lines
-set statusline+=Line:\ %l/%L
+set statusline+=\ Line:\ %l/%L
 " File type
 set statusline+=\ [%Y]
 
