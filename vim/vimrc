@@ -33,16 +33,24 @@ set breakindent
 
 "
 " Status line options
+" Git status function
+function! EvilStatusline()
+    if isdirectory("../**/.git") || isdirectory(".git")
+        let branch = fugitive#head()
+        return "[Git: " . branch . "]"
+    endif
+    return ""
+endfunction
 " Always show statusline
 set laststatus=2
 " File name
-set statusline=%f
+set statusline=%t
 " File type
 set statusline+=\ [%Y]
+" Git status
+set statusline+=\ %{EvilStatusline()}
 " Separator, align right
 set statusline+=\ %=
-" Git status
-set statusline+=%{fugitive#statusline()}
 " Current line / totale number of lines
 set statusline+=\ L:\ %l/%L
 " Column number
