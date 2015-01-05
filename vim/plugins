@@ -72,6 +72,10 @@ Plugin 'nono/jquery.vim'
 " Syntax helper
 Plugin 'elzr/vim-json'
 
+" Lightline
+" Powerline like statusline
+Plugin 'itchyny/lightline.vim'
+
 " Markdown
 Plugin 'tpope/vim-markdown'
 
