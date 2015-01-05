@@ -84,9 +84,15 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 "
 " NerdTREE
-"
-let g:NERDTreeWinSize = 40  " Set width
-let NERDTreeShowHidden = 1  " Show hidden files/folders
+
+function! EmptyStatusline()
+    return ""
+endfunction
+
+" Set width
+let g:NERDTreeWinSize=40
+" Show hidden files/folders
+let NERDTreeShowHidden=1
 
 "
 " Emmet settings
