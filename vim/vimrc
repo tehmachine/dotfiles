@@ -84,15 +84,12 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 "
 " NerdTREE
-
-function! EmptyStatusline()
-    return ""
-endfunction
-
 " Set width
 let g:NERDTreeWinSize=40
 " Show hidden files/folders
 let NERDTreeShowHidden=1
+" Ignore files
+let NERDTreeIgnore=['\.db$', '\.DS_Store$', '\.ini$', '\.swp$']
 
 "
 " Emmet settings
