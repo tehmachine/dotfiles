@@ -4,7 +4,6 @@ filetype off
 " Load Vundle and plugins
 "
 source ~/bin/dotfiles/vim/plugins
-" source ~/bin/dotfiles/vim/statusline
 
 let mapleader=" "
 syntax on
@@ -45,18 +44,24 @@ set softtabstop=4
 autocmd BufWritePre * :%s/\s\+$//e
 set wrap
 set linebreak
-" note trailing space at end of next line
-" set showbreak=>\ \ \
 
 " Lightline
 " Use powerline fonts
 let g:lightline = {
     \ 'active': {
     \   'left': [ ['mode', 'paste'],
-    \             ['fugitive', 'readonly', 'filename', 'modified'] ]
+    \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+    \   'right': [ ['lineinfo'],
+    \              ['fileformat', 'fileencoding', 'filetype'] ],
+    \ },
+    \ 'inactive': {
+    \   'left': [ ['fugitive', 'readonly', 'filename', 'modified'] ],
+    \   'right': [ ['lineinfo'],
+    \              ['fileformat', 'fileencoding', 'filetype'] ]
     \ },
     \ 'component': {
-    \   'readonly': '%{&readonly?"⭤":""}',
+    \   'lineinfo': 'L:%l/%L C:%c',
+    \   'readonly': '%{&readonly ? "⭤" : ""}',
     \   'fugitive': '%{exists("*fugitive#head") ? " " . fugitive#head() : ""}'
     \ },
     \ 'component_visible_condition': {
@@ -89,7 +94,7 @@ let g:NERDTreeWinSize=40
 " Show hidden files/folders
 let NERDTreeShowHidden=1
 " Ignore files
-let NERDTreeIgnore=['\.db$', '\.DS_Store$', '\.ini$', '\.swp$']
+let NERDTreeIgnore=['\.db$', '\.DS_Store$', '\.ini$', '\.Spotlight-V100$', '\.swp$', '\.Trashes$']
 
 "
 " Emmet settings
