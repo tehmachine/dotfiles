@@ -1,5 +1,7 @@
 bash
 npm
+vim/sample-statusline
+vim/statusline-legacy
 vim/vim/.netrwhist
 vim/vim/bundle
 zsh/zshrc-e
