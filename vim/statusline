@@ -1,37 +1,120 @@
-" Status line options
-
-" Git status function
-function! EvilStatusline()
-    if isdirectory("../**/.git") || isdirectory(".git")
-        let branch = fugitive#head()
-        return "[Git: " . branch . "]"
-    endif
-    return ""
-endfunction
-
-" Always show statusline
 set laststatus=2
-let g:last_mode=""
+let g:EvilStatusline_powerline = 'on'
 
-" Display mode
-set statusline=%{EvilMode()}
+let g:EvilStatusline_color_normal       = 'ctermfg=234 ctermbg=154 cterm=NONE'
+let g:EvilStatusline_color_normal_sep   = 'ctermfg=154 ctermbg=236 cterm=NONE'
+let g:EvilStatusline_color_insert       = 'ctermfg=234 ctermbg=033 cterm=none'
+let g:EvilStatusline_color_insert_sep   = 'ctermfg=033 ctermbg=236 cterm=none'
+let g:EvilStatusline_color_replace      = 'ctermfg=234 ctermbg=160 cterm=NONE'
+let g:EvilStatusline_color_replace_sep  = 'ctermfg=160 ctermbg=236 cterm=NONE'
+let g:EvilStatusline_color_visual       = 'ctermfg=234 ctermbg=202 cterm=NONE'
+let g:EvilStatusline_color_visual_sep   = 'ctermfg=202 ctermbg=236 cterm=NONE'
+let g:EvilStatusline_color_filename     = 'ctermfg=250 ctermbg=236 cterm=NONE'
+let g:EvilStatusline_color_fileinfo     = 'ctermfg=242 ctermbg=234 cterm=NONE'
+let g:EvilStatusline_color_line         = 'ctermfg=250 ctermbg=236 cterm=NONE'
+let g:EvilStatusline_color_line_sep     = 'ctermfg=236 ctermbg=234 cterm=NONE'
 
-" File name
-set statusline+=\ %t
+" Check for Powerline fonts
+if g:EvilStatusline_powerline == 'on'
+    let g:EvilStatusline_sep_right      = ''
+    let g:EvilStatusline_sep_left       = ''
+    let g:EvilStatusline_subsep_right   = ''
+    let g:EvilStatusline_subsep_left    = ''
+    let g:EvilStatusline_sym_git        = ''
+    let g:EvilStatusline_sym_readonly   = ''
+else
+    let g:EvilStatusline_sep_right      = ''
+    let g:EvilStatusline_sep_left       = ''
+    let g:EvilStatusline_subsep_right   = '|'
+    let g:EvilStatusline_subsep_left    = g:EvilStatusline_subsep_right
+    let g:EvilStatusline_sym_git        = 'Git:'
+    let g:EvilStatusline_sym_readonly   = 'RO'
+endif
 
-" File type
-set statusline+=\ [%Y]
+function! EvilStatusline(mode)
 
-" Git status
-set statusline+=\ %{EvilStatusline()}
+    redraw
+    let l:mode = mode()
+    let status = ''
 
-" Separator, align right
-set statusline+=\ %=
+    " Check for active window
+    if a:mode == 'Enter'
+        " Check for mode
+        if l:mode ==# 'n'
+            exec 'hi User1 ' . g:EvilStatusline_color_normal
+            exec 'hi User2 ' . g:EvilStatusline_color_normal_sep
+            let status .= '%1*' . ' NORMAL ' . '%2*' . g:EvilStatusline_sep_right
+        elseif l:mode ==# 'i'
+            exec 'hi User1 ' . g:EvilStatusline_color_insert
+            exec 'hi User2 ' . g:EvilStatusline_color_insert_sep
+            let status .= '%1*' . ' INSERT ' . '%2*' . g:EvilStatusline_sep_right
+        elseif l:mode ==# 'R'
+            exec 'hi User1 ' . g:EvilStatusline_color_replace
+            exec 'hi User2 ' . g:EvilStatusline_color_replace_sep
+            let status .= '%1*' . ' REPLACE ' . '%2*' . g:EvilStatusline_sep_right
+        elseif l:mode ==# 'v'
+            exec 'hi User1 ' . g:EvilStatusline_color_visual
+            exec 'hi User2 ' . g:EvilStatusline_color_visual_sep
+            let status .= '%1*' . ' VISUAL ' . '%2*' . g:EvilStatusline_sep_right
+        elseif l:mode ==# 'V'
+            exec 'hi User1 ' . g:EvilStatusline_color_visual
+            exec 'hi User2 ' . g:EvilStatusline_color_visual_sep
+            let status .= '%1*' . ' VLINE ' . '%2*' . g:EvilStatusline_sep_right
+        elseif l:mode ==# ''
+            exec 'hi User1 ' . g:EvilStatusline_color_visual
+            exec 'hi User2 ' . g:EvilStatusline_color_visual_sep
+            let status .= '%1*' . ' VBLOCK ' . '%2*' . g:EvilStatusline_sep_right
+        else
+            exec 'hi User1 ' . g:EvilStatusline_color_visual
+            exec 'hi User2 ' . g:EvilStatusline_color_visual_sep
+            let status .= '%1*' . ' SEARCH ' . '%2*'. g:EvilStatusline_sep_right
+        endif
+    " If buffer inactive, don't display mode
+    elseif a:mode == 'Leave'
+        let status .= ''
+    endif
 
-" Current line / totale number of lines
-set statusline+=\ L:\ %l/%L
+    exec 'hi User3 ' . g:EvilStatusline_color_filename
+    exec 'hi User4 ' . g:EvilStatusline_color_fileinfo
+    exec 'hi User5 ' . g:EvilStatusline_color_line_sep
+    exec 'hi User6 ' . g:EvilStatusline_color_line
 
-" Column number
-set statusline+=\ C:\ %c
+    " Git branch
+    let status .= "%3*%{EvilGit()}"
+
+    " Read only, file name, and modified
+    let status .= "%{EvilReadonly()}\ %t\ %m" . '%5*' . g:EvilStatusline_sep_right . '%0*'
+
+    " File format, encoding, and type
+    let status .= '%4*' . "%=\ %{&fileformat}\ " . g:EvilStatusline_subsep_left . "\ %{&fileencoding}\ " . g:EvilStatusline_subsep_left. "\ %Y\ "
+
+    " Line and column info
+    let status .= '%5*' . g:EvilStatusline_sep_left . '%6*' . "\ L: %l/%L\ C:\ %c\ "
+
+    return status
+
+endfunc
+
+function! EvilGit()
+    if isdirectory('../**/.git') || isdirectory('.git')
+        let branch = fugitive#head()
+        return '  ' . g:EvilStatusline_sym_git . ' ' . branch . ' ' . g:EvilStatusline_subsep_right
+    endif
+endfunc
+
+" Read only
+function! EvilReadonly()
+    if &readonly
+        return '  ' . g:EvilStatusline_sym_readonly . ' ' . g:EvilStatusline_subsep_right
+    endif
+    return ''
+endfunc
+
+au WinEnter * setlocal statusline=%!EvilStatusline('Enter')
+au WinLeave * setlocal statusline=%!EvilStatusline('Leave')
+set statusline=%!EvilStatusline('Enter')
+
+" au InsertEnter & call EvilMode(v:insertmode)
 
 " vim: ft=vim
+
