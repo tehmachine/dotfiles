@@ -14,13 +14,13 @@ Plugin 'xsbeats/vim-blade'
 " Commentary
 Plugin 'tpope/vim-commentary'
 
-" CSS3
-" Enhanced CSS3 support
-Plugin 'hail2u/vim-css3-syntax'
-
 " CtrlP
 " Fuzzy searching
 Plugin 'kien/ctrlp.vim'
+
+" CSS3
+" Enhanced CSS3 support
+Plugin 'hail2u/vim-css3-syntax'
 
 " DelimitMate
 " Autocomplete for quotes, brackets, etc.
@@ -71,10 +71,6 @@ Plugin 'nono/jquery.vim'
 " JSON
 " Syntax helper
 Plugin 'elzr/vim-json'
-
-" Lightline
-" Powerline like statusline
-Plugin 'itchyny/lightline.vim'
 
 " Markdown
 Plugin 'tpope/vim-markdown'
