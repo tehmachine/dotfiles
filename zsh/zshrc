@@ -52,7 +52,7 @@ ZSH_THEME="evilbug"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bower gem git brew osx nanoc)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,7 +61,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="~/.rbenv/shims:/usr/local/bin:/opt/local/bin:/opt/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:"
 
 # Load rbenv automatically
-
 eval "$(rbenv init -)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
