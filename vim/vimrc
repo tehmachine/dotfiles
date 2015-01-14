@@ -29,6 +29,7 @@ set virtualedit=onemore
 set hlsearch
 set cursorline
 set breakindent
+set lazyredraw
 
 " ZSH
 " set shell=/usr/local/bin/zsh\ -i
@@ -59,15 +60,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 "
-" NerdTREE
-" Set width
-let g:NERDTreeWinSize=40
-" Show hidden files/folders
-let NERDTreeShowHidden=1
-" Ignore files
-let NERDTreeIgnore=['\.db$', '\.DS_Store$', '\.ini$', '\.Spotlight-V100$', '\.swp$', '\.Trashes$']
-
-"
 " Emmet settings
 "
 let g:user_emmet_settings = {
@@ -81,27 +73,16 @@ let g:user_emmet_settings = {
 \}
 
 "
+" Gist
+"
+let g:gist_detect_filetype = 1
+
+"
 " Neocomplete
 "
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"
-" Snippets
-"
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-"
-" Gist
-"
-let g:gist_detect_filetype = 1
 
 "
 " Custom keymaps
@@ -117,5 +98,3 @@ nnoremap <leader>w :q<CR>
 nmap j gj
 nmap k gk
 
-" NERDTree toggle
-nnoremap <leader>n :NERDTreeToggle<CR>
