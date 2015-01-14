@@ -72,6 +72,10 @@ Plugin 'nono/jquery.vim'
 " Syntax helper
 Plugin 'elzr/vim-json'
 
+" Largefile
+" Handle very large files
+Plugin 'LargeFile'
+
 " Markdown
 Plugin 'tpope/vim-markdown'
 
@@ -85,9 +89,6 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Neocomplete
 " Autocomplete/CodeIntel
 Plugin 'Shougo/neocomplete.vim'
-
-" NERDTree
-Plugin 'scrooloose/nerdtree'
 
 " Rails
 Plugin 'tpope/vim-rails'
