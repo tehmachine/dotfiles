@@ -4,6 +4,8 @@ vim/sample-statusline
 vim/statusline-legacy
 vim/vim/.netrwhist
 vim/vim/bundle
+zsh/prompt
+zsh/pure.zsh
 zsh/zshrc-e
 zsh/oh-my-zsh
 *.swp
