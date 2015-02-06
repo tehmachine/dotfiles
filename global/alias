@@ -23,3 +23,8 @@ alias sqlre='mysql.server restart'
 alias servon='sudo apachectl start; mysql.server start'
 alias servoff='sudo apachectl stop; mysql.server stop'
 alias servre='sudo apachectl restart; mysql.server restart'
+
+####################
+# Laravel
+####################
+alias laravel-new='composer create-project laravel/laravel'
