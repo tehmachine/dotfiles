@@ -27,4 +27,5 @@ alias servre='sudo apachectl restart; mysql.server restart'
 ####################
 # Laravel
 ####################
-alias laravel-new='composer create-project laravel/laravel'
+alias artisan='php artisan'
+alias laravel='~/.composer/vendor/bin/laravel'
