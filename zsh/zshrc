@@ -1,84 +1,124 @@
+export TERM=xterm-256color
+export CLICOLOR=1
+export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+####################
+# ZSH COLORS
+####################
+autoload -Uz colors && colors
+
+####################
+# AUTOCOMPLETE
+####################
+autoload -Uz compinit && compinit -iCd $ZCACHEDIR/zcompdump
+zstyle ':completion:*' use-cache true
+zstyle ':completion' cache-path ~/.cache
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' verbose true
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' format '%F{227}Completing %d%f'
+zstyle ':completion:*' warnings '%F{red}No matches for: %d%f'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:manuals' separate-sections true
+zstyle ':completion:*:*:*:*:processes' command 'ps -u $USER -o pid,user,comm -w'
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=29=34"
+zstyle ':completion:*:*:killall:*' menu yes select
+zstyle ':completion:*:killall:*' force-list always
+zstyle ':completion:*' users mihai root
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:matches' group 'yes'
+zstyle -e ':completion:*' max-errors 'reply=( $(( ($#PREFIX+$#SUFFIX)/3 )) numeric )'
+
+####################
+# HISTORY
+####################
+HISTFILE=$HOME/.cache/.zhistory
+HISTSIZE=2048
+SAVEHIST=2048
+# Append
+setopt append_history
+# No duplicate
+setopt hist_ignore_all_dups
+# Ignore space prefixed commands
+unsetopt hist_ignore_space
+# Trim blank
+setopt hist_reduce_blanks
+# Show before executing history command
+setopt hist_verify
+# Add commands as they are typed
+setopt inc_append_history
+# Share hist between sessions
+setopt share_history
+# !keyword
+setopt bang_hist
+
+####################
+# EXPORTS
+####################
+export ARCHFLAGS="-arch x86_64"
+export EDITOR=vim
+
+####################
+# VARIOUS
+####################
+# If cmd is path, cd into
+setopt auto_cd
+# Remove slash
+setopt auto_remove_slash
+# Resolve symlinks
+setopt chase_links
+# Correct cmd spelling
+setopt correct
+# Complex pattern globbing
+setopt extended_glob
+# Include dotfiles in globbing
+setopt glob_dots
+# Confirm for rm or rm path/*
+unsetopt rm_star_silent
+
+####################
 # SOURCES
+####################
 source ~/bin/dotfiles/global/alias
 source ~/bin/dotfiles/global/env
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/bin/dotfiles/zsh/oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#
-# Selected themes:
-# blinks, clean, fwalch, kphoen, mrtazz, simple, wedisagree/wedisagree-custom
-ZSH_THEME="evilbug"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment following line if you want to  shown in the command execution time stamp
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=()
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-export PATH="~/.rbenv/shims:/usr/local/bin:/opt/local/bin:/opt/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:"
-
-# Load rbenv automatically
+####################
+# PATH
+####################
+export PATH="~/.composer/vendor/bin:~/.rbenv/shims:/usr/local/bin:/opt/local/bin:/opt/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:"
 eval "$(rbenv init -)"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# PROMPT
+function evilprompt() {
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+    # Colors
+    gray="244"
+    green="156"
+    orange="202"
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+    export PROMPT_EOL_MARK=''
+    setopt PROMPT_SUBST
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+    # VCS
+    autoload -Uz vcs_info
+    zstyle ':vcs_info:*' enable git
+    zstyle ':vcs_info:*' check-for-changes true
+    zstyle ':vcs_info:*' formats '%F{202}%s: %b%u%c'
+    zstyle ':vcs_info:*' actionformats '(%F{yellow}%b%f:%.8i%f%c%u [%a])'
+    zstyle ':vcs_info:*' stagedstr ' %F{156}+%f'
+    zstyle ':vcs_info:*' unstagedstr ' *%f'
+    precmd() {
+        vcs_info
+        print ''
+    }
+
+    PROMPT=$'%F{$gray}[%~] ${vcs_info_msg_0_} \n%F{white}%n@%m %F{$green}❯%f '
+    RPROMPT=$'%F{$gray}[%*]%f'
+}
+
+evilprompt
