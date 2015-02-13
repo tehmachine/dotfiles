@@ -89,7 +89,7 @@ function! EvilStatusline(mode)
     let status .= "%{EvilReadonly()}%t\ %m" . "%5*" . g:EvilStatusline_sep_right . "%0*"
 
     " File format, encoding, and type
-    let status .= "%4*" . "%=\ %{&fileformat}\ " . g:EvilStatusline_subsep_left . "\ %{&fileencoding}\ " . g:EvilStatusline_subsep_left . "\ %{&filetype}\ "
+    let status .= "%4*" . "%=%{&fileformat}\ " . g:EvilStatusline_subsep_left . "\ %{&fileencoding}\ " . g:EvilStatusline_subsep_left . "\ %{&filetype}\ "
 
     " Line and column info
     let status .= "%5*" . g:EvilStatusline_sep_left . "%6*" . "\ L: %l/%L\ C:\ %c\ "
