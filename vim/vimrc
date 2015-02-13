@@ -60,6 +60,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 " Emmet settings
 "
 let g:user_emmet_settings = {
+\  'html': {
+\       'indentation': '    '
+\   },
 \  'php' : {
 \    'extends' : 'html',
 \    'filters' : 'c',
