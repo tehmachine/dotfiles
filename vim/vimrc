@@ -9,7 +9,6 @@ source ~/bin/dotfiles/vim/statusline
 let mapleader=" "
 syntax on
 filetype plugin indent on
-set background=dark
 colorscheme monokai
 
 set laststatus=2
@@ -29,6 +28,7 @@ set virtualedit=onemore
 set hlsearch
 set cursorline
 set breakindent
+set noswapfile
 set lazyredraw
 
 " ZSH
@@ -77,8 +77,16 @@ let g:user_emmet_settings = {
 "
 let g:gist_detect_filetype = 1
 
+" Javascript syntax libraries
+" angularjs, angularui, backbone, chai, flux, jasmine, jquery, prelude, react, requirejs, sugar, underscore
+let g:used_javascript_libs = 'backbone, handlebars, jquery, react, underscore'
+
 " jQuery
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+" JSX
+" Enable jsx highlighting in .js files
+let g:jsx_ext_required = 0
 
 "
 " Neocomplete
