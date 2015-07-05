@@ -59,6 +59,10 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 " Syntax helper
 Plugin 'elzr/vim-json'
 
+" JSX
+" JSX syntax highlighting
+Plugin 'mxw/vim-jsx'
+
 " Markdown
 Plugin 'tpope/vim-markdown'
 
@@ -74,7 +78,7 @@ Plugin 'tpope/vim-surround'
 
 " Syntastic
 " Linter
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 
 " Tabular
 " Text alignment helper
