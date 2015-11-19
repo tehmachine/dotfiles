@@ -39,6 +39,9 @@ Plugin 'mattn/gist-vim'
 " Git gutter
 Plugin 'airblade/vim-gitgutter'
 
+" Handlebars highlighting
+Plugin 'mustache/vim-mustache-handlebars'
+
 " HAML
 " Haml and SASS support
 Plugin 'tpope/vim-haml'
