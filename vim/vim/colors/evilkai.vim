@@ -12,29 +12,29 @@ let g:colors_name = "evilkai"
 
 " yellow
 " string
-hi String ctermfg=229 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
+hi String ctermfg=228 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 
 " pink
 " keywords, operators, highlight
-hi MatchParen ctermfg=204 ctermbg=NONE cterm=underline guifg=#f92672 guibg=NONE gui=underline
-hi Conditional ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Define ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi ErrorMsg ctermfg=231 ctermbg=204 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi IncSearch ctermbg=204 ctermfg=15 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
-hi WarningMsg ctermfg=231 ctermbg=204 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi Keyword ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Operator ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi PreProc ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Search ctermbg=204 ctermfg=15 guifg=NONE guibg=NONE
-hi Statement ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Tag ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyClass ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyInclude ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyControl ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyOperator ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi rubyException ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi yamlKey ctermfg=204 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Todo ctermfg=204 ctermbg=NONE cterm=inverse,bold guifg=#75715e guibg=NONE gui=inverse,bold
+hi MatchParen ctermfg=197 ctermbg=NONE cterm=underline guifg=#f92672 guibg=NONE gui=underline
+hi Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi IncSearch ctermbg=197 ctermfg=15 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
+hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi Keyword ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Operator ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi PreProc ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Search ctermbg=197 ctermfg=15 guifg=NONE guibg=NONE
+hi Statement ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi rubyClass ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi rubyInclude ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi rubyControl ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi rubyOperator ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi rubyException ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi yamlKey ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Todo ctermfg=197 ctermbg=NONE cterm=inverse,bold guifg=#75715e guibg=NONE gui=inverse,bold
 
 " light purple
 " directory
