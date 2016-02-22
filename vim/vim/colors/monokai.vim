@@ -5,8 +5,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-set background=dark
-let g:colors_name = "Monokai"
+let g:colors_name = "monokai"
 
 " Reset Git Gutter colors
 highlight clear SignColumn
