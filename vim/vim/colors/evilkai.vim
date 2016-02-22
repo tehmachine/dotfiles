@@ -51,13 +51,22 @@ hi StorageClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=
 hi cssColor ctermfg=81 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi cssValueLength ctermfg=81 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi htmlSpecialChar ctermfg=81 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Identifier ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi htmlH3 ctermfg=81 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
+hi htmlH4 ctermfg=81 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
+hi htmlH5 ctermfg=81 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
+hi htmlH6 ctermfg=81 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
+hi javaScriptFunction ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi javaScriptRailsFunction ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
+hi cssFunctionName ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
+hi cssCommonAttr ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 
 " green
-hi Type ctermfg=154 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Function ctermfg=154 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi cssClassName ctermfg=154 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-hi htmlH2 ctermfg=154 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
-hi cssPseudoClassId ctermfg=154 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
+hi Type ctermfg=156 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi Function ctermfg=156 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi cssClassName ctermfg=156 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
+hi htmlH2 ctermfg=156 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
+hi cssPseudoClassId ctermfg=156 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
 
 " grey
 " comments, folded, cursor, column
@@ -83,18 +92,6 @@ hi StatusLineNC ctermfg=246 ctermbg=234 cterm=NONE guifg=#f8f8f2 guibg=#64645e g
 hi TabLineFill term=bold cterm=bold ctermbg=0
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
-
-" bright blue
-" variables
-hi Identifier ctermfg=123 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi htmlH3 ctermfg=123 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
-hi htmlH4 ctermfg=123 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
-hi htmlH5 ctermfg=123 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
-hi htmlH6 ctermfg=123 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
-hi javaScriptFunction ctermfg=123 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi javaScriptRailsFunction ctermfg=123 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi cssFunctionName ctermfg=123 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
-hi cssCommonAttr ctermfg=123 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 
 " orange
 hi cssURL ctermfg=214 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=italic
