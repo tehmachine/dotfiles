@@ -1,17 +1,25 @@
 # ALIAS
-alias li='ls -ahl'
+alias li='ls -alh'
 alias c='clear'
 alias r='rm -rf'
-alias upgrade='brew update; brew upgrade --all'
-alias spotlighton='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
-alias spotlightoff='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist'
+alias autoclean='sudo apt autoclean'
+alias autoremove='sudo apt autoremove -y'
+alias install='sudo apt install -y'
+alias purge='sudo apt purge'
+alias update='sudo apt update'
+alias upgrade='sudo apt update; sudo apt dist-upgrade -y; sudo npm -g update; composer selfupdate'
 take () {
 	mkdir $1
 	cd $1
 }
 
 ####################
-# Apache, MySql
+# Infinality
+####################
+alias infinality='sudo bash /etc/fonts/infinality/infctl.sh setstyle'
+
+####################
+# Nginx, MySql
 ####################
 # alias apacheon='sudo apachectl start'
 # alias apacheoff='sudo apachectl stop'
@@ -19,22 +27,17 @@ take () {
 # alias sqlon='mysql.server start'
 # alias sqloff='mysql.server stop'
 # alias sqlre='mysql.server restart'
-# alias servon='sudo apachectl start; mysql.server start'
-# alias servoff='sudo apachectl stop; mysql.server stop'
-# alias servre='sudo apachectl restart; mysql.server restart'
-
-####################
-# Nginx, MySql
-####################
-alias nginxon='sudo nginx'
-alias nginxoff='sudo nginx -s stop'
-alias nginxre='sudo nginx -s stop; sudo nginx '
-alias servon='sudo nginx; mysql.server start'
-alias servoff='sudo nginx -s stop; mysql.server stop'
-alias servre='sudo nginx -s stop; sudo nginx; mysql.server restart'
+alias servon='sudo service nginx start; sudo service mysql start; sudo service php7.0-fpm start; sudo service postfix start'
+alias servoff='sudo service nginx stop; sudo service mysql stop; sudo service php7.0-fpm stop; sudo service postfix stop'
+alias servre='sudo service nginx restart; sudo service mysql restart; sudo service php7.0-fpm restart; sudo service postfix restart'
 
 ####################
 # Laravel
 ####################
 alias artisan='php artisan'
 alias laravel='~/.composer/vendor/bin/laravel'
+
+####################
+# Vim
+####################
+alias vimbuild='./bin/vim_build.sh'
