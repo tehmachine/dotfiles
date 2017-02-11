@@ -28,10 +28,6 @@ Plugin 'Lokaltog/vim-easymotion'
 " Emmet
 Plugin 'mattn/emmet-vim'
 
-" Fugitive
-" Git wrapper
-Plugin 'tpope/vim-fugitive'
-
 " Gist
 " Git gists
 Plugin 'mattn/gist-vim'
@@ -50,10 +46,6 @@ Plugin 'tpope/vim-haml'
 " Enhanced HTML5 support
 Plugin 'othree/html5.vim'
 
-" Jade
-" Syntax helper
-Plugin 'digitaltoad/vim-jade'
-
 " Javascript Libraries Syntax
 " Syntax helper for various javascript libraries
 Plugin 'othree/javascript-libraries-syntax.vim'
@@ -66,11 +58,12 @@ Plugin 'elzr/vim-json'
 " JSX syntax highlighting
 Plugin 'mxw/vim-jsx'
 
+" A.L.E.
+" Asynchronous linting
+Plugin 'w0rp/ale'
+
 " Markdown
 Plugin 'tpope/vim-markdown'
-
-" Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
 
 " Neocomplete
 " Autocomplete/CodeIntel
@@ -79,20 +72,15 @@ Plugin 'Shougo/neocomplete.vim'
 " Surround
 Plugin 'tpope/vim-surround'
 
-" Syntastic
-" Linter
-" Plugin 'scrooloose/syntastic'
-
 " Tabular
 " Text alignment helper
 Plugin 'godlygeek/tabular'
 
-" Vinarise
-" Hex editing
-Plugin 'Shougo/vinarise.vim'
-
 " Web API
 Plugin 'mattn/webapi-vim'
+
+" Wordpress
+Plugin 'dsawardekar/wordpress.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
