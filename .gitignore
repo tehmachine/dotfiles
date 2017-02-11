@@ -7,6 +7,6 @@ vim/vim/bundle
 zsh/prompt
 zsh/pure.zsh
 zsh/zshrc-e
-zsh/oh-my-zsh
 *.swp
 .DS_Store
+._*
