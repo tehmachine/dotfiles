@@ -90,12 +90,9 @@ source ~/bin/dotfiles/global/env
 ####################
 # PATH
 ####################
-export PATH="/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:~/.rbenv/shims:/opt/local/bin:/opt/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:"
-eval "$(rbenv init -)"
+export PATH="~/.composer/vendor/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:"
 
-####################
 # PROMPT
-####################
 function evilprompt() {
 
     # Colors
