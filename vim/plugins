@@ -28,6 +28,10 @@ Plugin 'Lokaltog/vim-easymotion'
 " Emmet
 Plugin 'mattn/emmet-vim'
 
+" Git
+" Fugitive
+Plugin 'tpope/vim-fugitive'
+
 " Gist
 " Git gists
 Plugin 'mattn/gist-vim'
