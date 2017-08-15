@@ -107,7 +107,7 @@ function evilprompt() {
     autoload -Uz vcs_info
     zstyle ':vcs_info:*' enable git
     zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' formats '%F{202}%s: %b%u%c'
+    zstyle ':vcs_info:*' formats '%F{202}%s: %b%u%c%m'
     zstyle ':vcs_info:*' actionformats '(%F{yellow}%b%f:%.8i%f%c%u [%a])'
     zstyle ':vcs_info:*' stagedstr ' %F{156}+%f'
     zstyle ':vcs_info:*' unstagedstr ' *%f'
