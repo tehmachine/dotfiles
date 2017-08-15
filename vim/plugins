@@ -16,7 +16,7 @@ Plugin 'tpope/vim-commentary'
 
 " CtrlP
 " Fuzzy searching
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " DelimitMate
 " Autocomplete for quotes, brackets, etc.
@@ -79,6 +79,16 @@ Plugin 'tpope/vim-surround'
 " Tabular
 " Text alignment helper
 Plugin 'godlygeek/tabular'
+
+" Twig syntax highlighting
+Plugin 'lumiliet/vim-twig'
+
+" Nginx
+Plugin 'chr4/nginx.vim'
+
+" Vue
+" Syntax highlighting
+Plugin 'posva/vim-vue'
 
 " Web API
 Plugin 'mattn/webapi-vim'
