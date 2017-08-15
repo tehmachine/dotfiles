@@ -1,5 +1,5 @@
 # ALIAS
-alias li='ls -alh'
+alias li='ls -alh --color'
 alias c='clear'
 alias r='rm -rf'
 alias autoclean='sudo apt autoclean'
