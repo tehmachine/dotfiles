@@ -78,15 +78,16 @@ let g:user_emmet_settings = {
 let g:gist_detect_filetype = 1
 
 " Javascript syntax libraries
-" angularjs, angularui, backbone, chai, flux, jasmine, jquery, prelude, react, requirejs, sugar, underscore
-let g:used_javascript_libs = 'backbone, handlebars, jquery, react, underscore'
+" angularjs, angularui, backbone, chai, flux, jasmine, jquery, prelude, react, requirejs, sugar, underscore, vue
+let g:used_javascript_libs = 'handlebars, jquery, underscore, vue'
 
 " jQuery
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+" au BufRead,BufNewFile *.vue set ft=javascript syntax=vue
 
 " JSX
 " Enable jsx highlighting in .js files
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 
 "
 " Neocomplete
