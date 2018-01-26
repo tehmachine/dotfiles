@@ -7,26 +7,15 @@ alias autoremove='sudo apt autoremove -y'
 alias install='sudo apt install -y'
 alias purge='sudo apt purge'
 alias update='sudo apt update'
-alias upgrade='sudo apt update; sudo apt dist-upgrade -y; sudo npm -g update; composer selfupdate'
+alias upgrade='sudo apt update; sudo apt upgrade -y; sudo npm -g update; composer selfupdate; wp cli update'
 take () {
 	mkdir $1
 	cd $1
 }
 
 ####################
-# Infinality
-####################
-alias infinality='sudo bash /etc/fonts/infinality/infctl.sh setstyle'
-
-####################
 # Nginx, MySql
 ####################
-# alias apacheon='sudo apachectl start'
-# alias apacheoff='sudo apachectl stop'
-# alias apachere='sudo apachectl restart'
-# alias sqlon='mysql.server start'
-# alias sqloff='mysql.server stop'
-# alias sqlre='mysql.server restart'
 alias servon='sudo service nginx start; sudo service mysql start; sudo service php7.0-fpm start; sudo service postfix start'
 alias servoff='sudo service nginx stop; sudo service mysql stop; sudo service php7.0-fpm stop; sudo service postfix stop'
 alias servre='sudo service nginx restart; sudo service mysql restart; sudo service php7.0-fpm restart; sudo service postfix restart'
@@ -35,9 +24,9 @@ alias servre='sudo service nginx restart; sudo service mysql restart; sudo servi
 # Laravel
 ####################
 alias artisan='php artisan'
-alias laravel='~/.composer/vendor/bin/laravel'
 
 ####################
-# Vim
+# Wordpress
 ####################
-alias vimbuild='./bin/vim_build.sh'
+alias wp='~/bin/wp'
+
