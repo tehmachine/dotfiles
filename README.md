@@ -1,6 +1,6 @@
 # Dotfiles - [tehmachine](https://github.com/tehmachine/dotfiles)
 
-This repo serves mainly as a backup for my dotfiles but feel free to reference it for your own endeavors and/or make suggestions. This dir sits in `~/bin` with appropriate symlinks in `~`. Note I am using Linux and some aliases may need to be adapted to your OS.
+This repo serves mainly as a backup for my dotfiles but feel free to reference it for your own endeavors and/or make suggestions. This dir sits in `~/bin` with appropriate symlinks in `~`. Note I am using Linux (Debian 9) and some aliases may need to be adapted to your OS.
 
 ## Tmux + Vim
 
