@@ -1,5 +1,3 @@
-filetype off
-
 "
 " Load Vundle and plugins
 "
@@ -83,18 +81,7 @@ let g:used_javascript_libs = 'handlebars, jquery, underscore, vue'
 
 " jQuery
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-" au BufRead,BufNewFile *.vue set ft=javascript syntax=vue
-
-" JSX
-" Enable jsx highlighting in .js files
-" let g:jsx_ext_required = 0
-
-"
-" Neocomplete
-"
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+au BufRead,BufNewFile *.vue set ft=javascript syntax=vue
 
 "
 " Netrw
@@ -123,3 +110,4 @@ nmap k gk
 
 " ALE
 let g:ale_linters = { 'javascript': ['eslint'] }
+
