@@ -90,7 +90,7 @@ source ~/bin/dotfiles/global/env
 ####################
 # PATH
 ####################
-export PATH="$HOME/bin:$HOME/.config/composer/vendor/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin"
+export PATH="$HOME/bin:$HOME/.config/composer/vendor/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/X11/bin:$HOME/.local/lib/python3.5/site-packages"
 
 # PROMPT
 function evilprompt() {
