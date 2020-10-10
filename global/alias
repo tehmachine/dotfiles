@@ -7,7 +7,7 @@ alias autoremove='sudo apt autoremove -y'
 alias install='sudo apt install -y'
 alias purge='sudo apt purge'
 alias update='sudo apt update'
-alias upgrade='sudo apt update; sudo apt upgrade -y; sudo npm -g update; composer selfupdate; wp cli update'
+alias upgrade='sudo apt update; sudo apt upgrade -y'
 take () {
 	mkdir $1
 	cd $1
@@ -28,5 +28,5 @@ alias artisan='php artisan'
 ####################
 # Wordpress
 ####################
-alias wp='~/bin/wp'
+alias wp='~/bin/wp/wp'
 
