@@ -7,6 +7,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Blade
+" Syntax helper
+Plugin 'xsbeats/vim-blade'
+
 " Commentary
 Plugin 'tpope/vim-commentary'
 
@@ -14,21 +18,12 @@ Plugin 'tpope/vim-commentary'
 " Fuzzy searching
 Plugin 'ctrlpvim/ctrlp.vim'
 
-" Autocomplete
-Plugin 'valloric/youcompleteme'
-
-" A.L.E.
-" Asynchronous linting
-Plugin 'w0rp/ale'
-
-" Dev icons
-Plugin 'ryanoasis/vim-devicons'
-
 " DelimitMate
 " Autocomplete for quotes, brackets, etc.
 Plugin 'Raimondi/delimitMate'
 
-" Dockerfile syntax
+" Docker
+" Highlighting for Dockerfile
 Plugin 'ekalinin/dockerfile.vim'
 
 " EasyMotion
@@ -57,22 +52,37 @@ Plugin 'tpope/vim-haml'
 
 " Javascript Libraries Syntax
 " Syntax helper for various javascript libraries
+" Plugin 'othree/javascript-libraries-syntax.vim'
+" Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
+" Plugin 'isruslan/vim-es6'
+" Plugin 'stanangeloff/php.vim'
 
 " JSON
 " Syntax helper
 Plugin 'elzr/vim-json'
 
-" PHP complete
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'stanangeloff/php.vim'
+" JSX
+" JSX syntax highlighting
+" Plugin 'mxw/vim-jsx'
 
-" Laravel
-Plugin 'noahfrederick/vim-laravel'
-Plugin 'jwalton512/vim-blade'
+" A.L.E.
+" Asynchronous linting
+Plugin 'w0rp/ale'
 
 " Markdown
 Plugin 'tpope/vim-markdown'
+
+" Autocomplete
+Plugin 'ajh17/vimcompletesme'
+
+" Far
+" Search and Replace
+Plugin 'brooth/far.vim'
+
+" NERDTree
+" File explorer
+Plugin 'scrooloose/nerdtree'
 
 " Surround
 Plugin 'tpope/vim-surround'
@@ -93,6 +103,10 @@ Plugin 'posva/vim-vue'
 
 " Wordpress
 Plugin 'dsawardekar/wordpress.vim'
+
+" Vim Icons
+" Always load as last plugin
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
