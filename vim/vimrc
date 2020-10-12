@@ -47,15 +47,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 set wrap
 set linebreak
 
-" CtrlP ignore files
-" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-"       \ --ignore .git
-"       \ --ignore .svn
-"       \ --ignore .hg
-"       \ --ignore .DS_Store
-"       \ --ignore "**/*.pyc"
-"       \ -g ""'
-
 "
 " Emmet settings
 "
