@@ -9,6 +9,7 @@ syntax on
 filetype plugin indent on
 colorscheme monokai
 
+" Enable italics support
 highlight Comment cterm=italic
 
 set laststatus=2
