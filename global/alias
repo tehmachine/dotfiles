@@ -25,8 +25,3 @@ alias servre='sudo service nginx restart; sudo service mysql restart; sudo servi
 ####################
 alias artisan='php artisan'
 
-####################
-# Wordpress
-####################
-alias wp='~/bin/wp/wp'
-
